@@ -306,9 +306,16 @@ body {
 }
 
 .wrap {
+  width: 100%;
   min-width: 1900px;
 }
-.wrap .index-wrap {
+
+.main-page {
+  width: 100%;
+  min-width: 1440px;
+}
+
+.inner {
   width: 1440px;
   margin: 0 auto;
 }
@@ -335,119 +342,96 @@ body {
   border-radius: 6px;
 }
 
-.bxslider-container {
+.slick-slider {
   position: relative;
-  margin-bottom: 90px;
-}
-
-.bx-wrapper {
-  margin: 0;
-  padding-top: 39px;
-  box-shadow: none;
-}
-
-.bx-viewport {
-  width: 1440px;
-}
-
-.bxslider .slider-item figure {
-  width: 1320px;
-  padding-left: 120px;
-}
-.bxslider .slider-item figure img {
-  float: right;
-  width: 516px;
-}
-.bxslider .slider-item figure figcaption h3 {
-  margin-bottom: 20px;
-  font-size: 4rem;
-  line-height: 1.25;
-  color: #027373;
-}
-.bxslider .slider-item figure figcaption strong {
   display: block;
-  font-weight: 500;
-}
-.bxslider .slider-item figure figcaption p {
-  font-size: 1.8rem;
-  font-weight: 300;
-  line-height: 1.89;
-  color: #333;
-}
-.bxslider .slider-item .sub-list {
-  width: 100%;
-  background-color: #e6f1f1;
-  border-radius: 12px;
-}
-.bxslider .slider-item .sub-list .list-item {
-  display: block;
-  position: relative;
-  float: left;
-  width: 33.33%;
-  height: 162px;
   box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
 }
-.bxslider .slider-item .sub-list .list-item:first-child {
-  padding: 38px 0 0 54px;
-}
-.bxslider .slider-item .sub-list .list-item:first-child span {
-  font-size: 2.4rem;
-  line-height: 34px;
-}
-.bxslider .slider-item .sub-list .list-item:not(:first-child) {
-  padding: 25px 0 0 110px;
-  border-left: 2px solid #fff;
-  background-repeat: no-repeat;
-  background-position: 55px center;
-}
-.bxslider .slider-item .sub-list .list-item:nth-child(2) {
-  background-image: url("/images/icon_main_slide01_tab01.png");
-  background-size: 30px 40px;
-}
-.bxslider .slider-item .sub-list .list-item:nth-child(3) {
-  background-image: url("/images/icon_main_slide01_tab02.png");
-  background-size: 25px 33px;
-}
-.bxslider .slider-item .sub-list .list-item:nth-child(3) a {
-  right: 55px;
-}
-.bxslider .slider-item .sub-list .list-item a {
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
   display: block;
-  position: absolute;
-  right: 55px;
-  bottom: 40px;
-  width: 160px;
-  border: 0.5px solid #027373;
-  background-color: white;
-  font-size: 1.4rem;
-  text-align: center;
-  line-height: 40px;
-  color: #333;
-  outline: 3px solid white;
-  border-radius: 6px;
+  margin: 0;
+  padding: 0;
 }
-.bxslider .slider-item .sub-list .list-item span:first-child {
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
   display: block;
-  font-size: 1.8rem;
-  line-height: 24px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.bxslider .slider-item .sub-list .list-item span:nth-of-type(2) {
-  margin-left: 5px;
-  font-size: 1.8rem;
-  vertical-align: baseline;
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
 }
-.bxslider .slider-item .sub-list .list-item strong {
-  font-size: 5.6rem;
-  font-weight: 700;
-  line-height: 60px;
-  color: #027373;
-  vertical-align: baseline;
-  letter-spacing: 0;
+.slick-track:after {
+  clear: both;
 }
-.bxslider .slider-item .sub-list .list-item small {
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+[dir=rtl] .slick-slide {
+  float: right;
+}
+.slick-slide img {
   display: block;
-  color: #666666;
-  line-height: 30px;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
 }
 
 .custom-pager li {
@@ -488,7 +472,7 @@ body {
 .index-report .report-box .report-list .list-item {
   margin-bottom: 10px;
   padding-left: 16px;
-  background-image: url("/images/icon_ellipse17.png");
+  background-image: url("/img/icon_list_dot.png");
   background-repeat: no-repeat;
   background-position: left center;
 }
@@ -506,4 +490,90 @@ body {
   font-size: 1.8rem;
   color: #666;
 }
-/*# sourceMappingURL=project.css.map */
+
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: local("※"), url("/fonts/NotoSansKR-Light.woff2") format("woff2"), url("/fonts/NotoSansKR-Light.woff") format("woff"), url("/fonts/NotoSansKR-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("※"), url("/fonts/NotoSansKR-Regular.woff2") format("woff2"), url("/fonts/NotoSansKR-Regular.woff") format("woff"), url("/fonts/NotoSansKR-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: local("※"), url("/fonts/NotoSansKR-Medium.woff2") format("woff2"), url("/fonts/NotoSansKR-Medium.woff") format("woff"), url("/fonts/NotoSansKR-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("※"), url("/fonts/NotoSansKR-Bold.woff2") format("woff2"), url("/fonts/NotoSansKR-Bold.woff") format("woff"), url("/fonts/NotoSansKR-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("※"), url("../fonts/roboto-v29-latin-regular.woff2") format("woff2"), url("../fonts/roboto-v29-latin-regular.woff") format("woff"), url("../fonts/roboto-v29-latin-regular.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  unicode-range: U+0041-005A, U+0061-007A;
+}
+html {
+  font-size: 10px;
+  line-height: 10px;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+}
+
+.clear {
+  clear: both;
+}
+
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.wrap {
+  width: 100%;
+  min-width: 1900px;
+}
+
+.main-page {
+  width: 100%;
+  min-width: 1440px;
+}
+
+.inner {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.header-area {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #027373;
+}
+.header-area .inner {
+  padding: 22px 20px;
+  box-sizing: border-box;
+}
+/*# sourceMappingURL=maps/project.css.map */

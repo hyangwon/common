@@ -79,10 +79,16 @@ body {
 
 // 공통
 .wrap {
+  width: 100%;
   min-width: 1900px;
+}
 
-  .index-wrap{
-    width: 1440px;
-    margin: 0 auto;
-  }
+.main-page{
+  width: 100%;
+  min-width: 1440px;
+}
+
+.inner{
+  width: 1440px;
+  margin: 0 auto;
 }
