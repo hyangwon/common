@@ -1,7 +1,10 @@
 const gulp=require('gulp');
 const sass=require('gulp-sass')(require('sass'));
+const watch=require('gulp-watch');
 const sourcemaps=require('gulp-sourcemaps');
 const spritesmith = require('gulp.spritesmith');
+// const spritesmith = require('gulp.spritesmith-multi');
+// const spritesmithPlugin = require('webpack-spritesmith');
 
 gulp.task('sass', function () {
     return gulp.src('src/scss/*.scss')
@@ -12,8 +15,6 @@ gulp.task('sass', function () {
 gulp.task('watch', function () {
     gulp.watch('src/scss/*.scss',gulp.parallel(['sass','sourcemaps','sprite']));
 });
-
-gulp.task('default', gulp.parallel(['watch']));
 
 gulp.task('sourcemaps', function () {
     return gulp.src('src/scss/*.scss')
@@ -28,6 +29,7 @@ gulp.task('sprite', function() {
   const spriteData = gulp.src('src/img/sprite/*.png').pipe(spritesmith({
     imgName: 'sprite.png',
     cssName: 'sprite.css',
+    cssName: 'sprite.scss',
     padding: 5,
     cssOpts: {
       cssSelector: function(sprite) {
@@ -57,3 +59,5 @@ gulp.task('sprite', function() {
 //
 //   return spriteData.pipe(gulp.dest('src/img/images'));
 // });
+
+gulp.task('default', gulp.parallel(['watch']));
