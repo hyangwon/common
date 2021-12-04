@@ -8,16 +8,15 @@
   <link rel="stylesheet" href="./css/project.css">
   <link rel="stylesheet" type="text/css" href="./slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css" />
-  <script src="./js/include.js"></script>
+  <script src="./js/includeHTML.js"></script>
+  <script src="./js/includeRouter.js"></script>
   <title>test</title>
 </head>
 
 <body>
   <div class="wrap">
     <div class="container">
-      <header id="header">
-        <script>include("header.html");</script>
-      </header>
+      <header include-html="./include/header.html"></header>
       <main id="content" class="main-page">
         <div class="inner">
           <h2>주택도시기금</h2>
@@ -149,7 +148,12 @@
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="./slick/slick.min.js"></script>
-
+  <script>
+    includeHTML(function () {
+        includeRouter(function () {
+        });
+    });
+</script>
   <script type="text/javascript">
     $(document).ready(function() {
       $('.slide-list').slick({
