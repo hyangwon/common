@@ -13,7 +13,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('src/scss/*.scss',gulp.parallel(['sass','sourcemaps','sprite']));
+    gulp.watch('src/scss/**/*.scss',gulp.parallel(['sass','sourcemaps','sprite']));
 });
 
 gulp.task('sourcemaps', function () {
@@ -30,6 +30,7 @@ gulp.task('sprite', function() {
     imgName: 'sprite.png',
     cssName: 'sprite.css',
     cssName: 'sprite.scss',
+    imgPath : '../img/images/sprite.png',
     padding: 5,
     cssOpts: {
       cssSelector: function(sprite) {
