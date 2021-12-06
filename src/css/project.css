@@ -79,7 +79,7 @@ textarea {
   border: none;
   font-size: 12px;
   font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
-  color: #727272;
+  color: #000;
 }
 
 li,
@@ -440,6 +440,27 @@ body {
 
 .main-page {
   height: 100%;
+}
+.main-page .inner {
+  padding: 60px 20px;
+}
+.main-page .page-title {
+  position: relative;
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: normal;
+}
+.main-page .page-title:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 220px;
+  height: 3px;
+  background-color: #ccc;
+}
+.main-page .slide-area {
+  margin-top: 50px;
 }
 
 .custom-pager li {

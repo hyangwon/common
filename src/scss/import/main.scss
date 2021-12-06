@@ -128,6 +128,30 @@
 // main-page
 .main-page{
   height: 100%;
+
+  .inner{
+    padding: 60px 20px;
+  }
+
+  .page-title{
+    position: relative;
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-weight: normal;
+    &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 220px;
+      height: 3px;
+      background-color: #ccc;
+    }
+  }
+
+  .slide-area{
+    margin-top: 50px;
+  }
 }
 
 .custom-pager li {
