@@ -16,10 +16,7 @@
 
   .header-title{
     float: left;
-    width: 168px;
-    height: 57px;
-    margin-right: 100px;
-    // background: url(../img/sprite/logo_main.png) 0 0 no-repeat;
+    margin-right: 70px;
     @include sprite($logo_main);
 
     .title-link{
@@ -32,16 +29,22 @@
   .btn-link{
     float: left;
     padding: 12px 20px;
+    margin-top: 5px;
     color: $main-color;
     font-size: 14px;
     font-weight: bold;
     border: 1px solid $main-color;
     @include border-radius(6px);
+    &:hover{
+      color: #fff;
+      background-color: $main-color;
+      transition: ease-out 0.3s;
+    }
   }
 
   .tab-list{
     float: left;
-    margin-left: 50px;
+    margin: 5px 0 0 50px;
 
     .list-item{
       position: relative;
@@ -64,6 +67,47 @@
     .sub-tab{
       display: none;
       position: absolute;
+      padding-top: 20px;
+      background-color: #fff;
+      z-index: 50;
+
+      .list-item{
+        padding: 0;
+        color: #000;
+        font-size: 13px;
+        background-color: #fff;
+        + .list-item{
+          .item-link{
+            margin-top: 5px;
+          }
+        }
+      }
+      .item-link{
+        display: block;
+        padding: 5px 10px 5px 0;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .btn-box{
+    float: right;
+    padding: 10px 5px;
+    margin-top: 5px;
+
+    .btn-login{
+      display: inline-block;
+      @include sprite($icon_login);
+      vertical-align: top;
+      + .btn-map{
+        margin-left: 20px;
+      }
+    }
+    .btn-map{
+      display: inline-block;
+      @include sprite($icon_menu);
+      vertical-align: top;
+      cursor: pointer;
     }
   }
 }

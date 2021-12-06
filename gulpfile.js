@@ -34,7 +34,7 @@ gulp.task('sprite', function() {
     padding: 5,
     cssOpts: {
       cssSelector: function(sprite) {
-        return '.sprite-' + sprite.name;
+        return '.sprite_' + sprite.name;
       }
     }
   }));
