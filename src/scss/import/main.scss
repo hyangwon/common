@@ -131,6 +131,7 @@
 
   .inner{
     padding: 60px 20px;
+    box-sizing: border-box;
   }
 
   .page-title{
@@ -151,27 +152,69 @@
 
   .slide-area{
     margin-top: 50px;
-  }
-}
 
-.custom-pager li {
-  display: inline-block;
-  &:not(:first-child) {
-    margin-left: 8px;
-  }
-  a {
-    display: block;
-    width: 10px;
-    height: 10px;
-    background-color: #ccc;
-    border-radius: 5px;
-    text-indent: -9999px;
-    &.active {
-      width: 36px;
-      background-color: #027373;
+    .main-box{
+      height: 350px;
+      background: url(../img/bg_main_slide1.png) 100% 0 no-repeat;
+      h3{
+        color: $main-color;
+        font-size: 40px;
+        font-weight: normal;
+
+        strong{
+          font-weight: 500;
+        }
+      }
+      p{
+        margin-top: 15px;
+        color: #333;
+        font-size: 18px;
+      }
+    }
+
+    .sub-list{
+      @include flexbox;
+      width: 100%;
+      background-color: #e6f1f1;
+      @include border-radius(12px);
+      .list-item{
+        position: relative;
+        @include flexbox;
+        flex: 1;
+        height: 160px;
+        padding: 0 50px;
+        flex-direction: column;
+
+        + .list-item{
+          border-left: 2px solid #fff;
+        }
+      }
+      .list-title{
+        font-size: 18px;
+      }
+      .btn-link{
+        position: absolute;
+        bottom: 40px;
+        right: 30px;
+        width: 150px;
+        height: 40px;
+        font-size: 14px;
+        line-height: 40px;
+        background-color: #fff;
+        border: 1px solid #027373;
+        outline: 3px solid #fff;
+        @include border-radius(6px);
+        text-align: center;
+        &:hover{
+          color: #fff;
+          background-color: $main-color;
+          transition: ease-out 0.3s;
+        }
+      }
     }
   }
 }
+
 
 
 .index-report .report-box {
