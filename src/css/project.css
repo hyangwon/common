@@ -508,14 +508,57 @@ body {
   display: flex;
   flex: 1;
   height: 160px;
-  padding: 0 50px;
+  padding: 25px 50px 0 110px;
   flex-direction: column;
+  box-sizing: border-box;
+}
+.main-page .slide-area .sub-list .list-item:first-of-type {
+  padding-left: 50px;
+}
+.main-page .slide-area .sub-list .list-item:first-of-type .list-title {
+  font-size: 25px;
+}
+.main-page .slide-area .sub-list .list-item:nth-child(2):before {
+  content: "";
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  margin-top: -20px;
+  background-image: url(../img/images/sprite.png);
+  background-position: -215px 0px;
+  width: 30px;
+  height: 40px;
+}
+.main-page .slide-area .sub-list .list-item:last-of-type:before {
+  content: "";
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  margin-top: -20px;
+  background-image: url(../img/images/sprite.png);
+  background-position: -215px -45px;
+  width: 25px;
+  height: 33px;
 }
 .main-page .slide-area .sub-list .list-item + .list-item {
   border-left: 2px solid #fff;
 }
 .main-page .slide-area .sub-list .list-title {
   font-size: 18px;
+}
+.main-page .slide-area .sub-list .list-amout {
+  font-size: 18px;
+}
+.main-page .slide-area .sub-list .list-amout strong {
+  color: #027373;
+  font-size: 55px;
+  line-height: 55px;
+}
+.main-page .slide-area .sub-list .sub-text {
+  display: inline-block;
+  margin-top: 10px;
+  color: #666;
+  font-size: 11px;
 }
 .main-page .slide-area .sub-list .btn-link {
   position: absolute;
@@ -582,7 +625,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   min-width: 1440px;
   background-color: #fff;
   z-index: 100;

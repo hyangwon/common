@@ -189,8 +189,36 @@
         @include flexbox;
         flex: 1;
         height: 160px;
-        padding: 0 50px;
+        padding: 25px 50px 0 110px;
         flex-direction: column;
+        box-sizing: border-box;
+
+        &:first-of-type{
+          padding-left: 50px;
+          .list-title{
+            font-size: 25px;
+          }
+        }
+        &:nth-child(2){
+          &:before{
+            content: '';
+            position: absolute;
+            left: 50px;
+            top: 50%;
+            margin-top: -20px;
+            @include sprite($img_slide_icon1);
+          }
+        }
+        &:last-of-type{
+          &:before{
+            content: '';
+            position: absolute;
+            left: 50px;
+            top: 50%;
+            margin-top: -20px;
+            @include sprite($img_slide_icon2);
+          }
+        }
 
         + .list-item{
           border-left: 2px solid #fff;
@@ -198,6 +226,20 @@
       }
       .list-title{
         font-size: 18px;
+      }
+      .list-amout{
+        font-size: 18px;
+        strong{
+          color: $main-color;
+          font-size: 55px;
+          line-height: 55px;
+        }
+      }
+      .sub-text{
+        display: inline-block;
+        margin-top: 10px;
+        color: #666;
+        font-size: 11px;
       }
       .btn-link{
         position: absolute;
