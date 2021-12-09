@@ -5,14 +5,23 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
+  min-width: 1440px;
   background-color: #fff;
+  z-index: 100;
+  &:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid #027373;
+  }
 
   .inner{
     padding: 22px 20px;
     font-size: 0;
     box-sizing: border-box;
-    border-bottom: 1px solid #027373;
     @include clear;
   }
 

@@ -157,21 +157,25 @@
     margin-top: 50px;
 
     .main-box{
-      height: 350px;
+      height: 400px;
       background: url(../img/bg_main_slide1.png) 100% 0 no-repeat;
       h3{
+        max-width: 900px;
         color: $main-color;
         font-size: 40px;
         font-weight: normal;
+        @include ellipsis;
 
         strong{
           font-weight: 500;
         }
       }
       p{
+        max-width: 900px;
         margin-top: 15px;
         color: #333;
         font-size: 18px;
+        @include ellipsis;
       }
     }
 
