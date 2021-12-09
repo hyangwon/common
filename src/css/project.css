@@ -732,15 +732,22 @@ body {
 .header-area .tab-list .sub-tab {
   display: none;
   position: absolute;
-  padding-top: 20px;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  padding: 20px;
   background-color: #fff;
+  box-shadow: 5px 7px 16px 0 rgba(16, 16, 16, 0.15);
   z-index: 50;
 }
 .header-area .tab-list .sub-tab .list-item {
+  width: inherit;
   padding: 0;
-  color: #000;
-  font-size: 13px;
   background-color: #fff;
+}
+.header-area .tab-list .sub-tab .list-item:hover .item-link {
+  color: #027373;
+  font-weight: bold;
 }
 .header-area .tab-list .sub-tab .list-item + .list-item .item-link {
   margin-top: 5px;
@@ -748,6 +755,8 @@ body {
 .header-area .tab-list .sub-tab .item-link {
   display: block;
   padding: 5px 10px 5px 0;
+  color: #000;
+  font-size: 13px;
   white-space: nowrap;
 }
 .header-area .btn-box {
@@ -796,6 +805,10 @@ body {
   background-position: 0px 0px;
   width: 210px;
   height: 84px;
+}
+.footer-logo .logo-link {
+  display: block;
+  height: 100%;
 }
 
 .footer-address {

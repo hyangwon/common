@@ -19,6 +19,11 @@
   right: 0;
   transform: translateY(-50%);
   @include sprite($logo_footer);
+
+  .logo-link{
+    display: block;
+    height: 100%;
+  }
 }
 
 .footer-address{
