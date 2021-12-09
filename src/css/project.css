@@ -314,11 +314,6 @@ body {
   min-width: 1440px;
 }
 
-.main-page {
-  width: 100%;
-  min-width: 1440px;
-}
-
 .inner {
   width: 1440px;
   margin: 0 auto;
@@ -439,7 +434,9 @@ body {
 }
 
 .main-page {
+  overflow: hidden;
   height: 100%;
+  min-width: 1440px;
 }
 .main-page .inner {
   padding: 60px 20px;
@@ -521,7 +518,7 @@ body {
   line-height: 40px;
   background-color: #fff;
   border: 1px solid #027373;
-  outline: 3px solid #fff;
+  outline: 3px solid #fff !important;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
@@ -572,84 +569,8 @@ body {
   color: #666;
 }
 
-@font-face {
-  font-family: "Noto Sans";
-  font-style: normal;
-  font-weight: 300;
-  src: local("※"), url("../fonts/NotoSansKR-Light.woff2") format("woff2"), url("../fonts/NotoSansKR-Light.woff") format("woff"), url("../fonts/NotoSansKR-Light.otf") format("opentype");
-}
-@font-face {
-  font-family: "Noto Sans";
-  font-style: normal;
-  font-weight: 400;
-  src: local("※"), url("../fonts/NotoSansKR-Regular.woff2") format("woff2"), url("../fonts/NotoSansKR-Regular.woff") format("woff"), url("../fonts/NotoSansKR-Regular.otf") format("opentype");
-}
-@font-face {
-  font-family: "Noto Sans";
-  font-style: normal;
-  font-weight: 500;
-  src: local("※"), url("../fonts/NotoSansKR-Medium.woff2") format("woff2"), url("../fonts/NotoSansKR-Medium.woff") format("woff"), url("../fonts/NotoSansKR-Medium.otf") format("opentype");
-}
-@font-face {
-  font-family: "Noto Sans";
-  font-style: normal;
-  font-weight: 700;
-  src: local("※"), url("../fonts/NotoSansKR-Bold.woff2") format("woff2"), url("../fonts/NotoSansKR-Bold.woff") format("woff"), url("../fonts/NotoSansKR-Bold.otf") format("opentype");
-}
-@font-face {
-  font-family: "Noto Sans";
-  font-style: normal;
-  font-weight: 400;
-  src: local("※"), url("../fonts/roboto-v29-latin-regular.woff2") format("woff2"), url("../fonts/roboto-v29-latin-regular.woff") format("woff"), url("../fonts/roboto-v29-latin-regular.ttf") format("truetype");
-  /* Safari, Android, iOS */
-  unicode-range: U+0041-005A, U+0061-007A;
-}
-html {
-  font-size: 10px;
-  line-height: 1.5;
-}
-
-body {
-  position: relative;
-  min-height: 100vh;
-  font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
-}
-
-.clear {
-  clear: both;
-}
-
-.clear:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-.blind {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.wrap {
-  width: 100%;
-  min-width: 1440px;
-}
-
-.main-page {
-  width: 100%;
-  min-width: 1440px;
-}
-
-.inner {
-  width: 1440px;
-  margin: 0 auto;
-}
-
 .header-area {
-  width: 100vw;
+  width: 100%;
   background-color: #fff;
   border-bottom: 1px solid #027373;
 }

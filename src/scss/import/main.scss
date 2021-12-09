@@ -127,7 +127,9 @@
 
 // main-page
 .main-page{
+  overflow: hidden;
   height: 100%;
+  min-width: 1440px;
 
   .inner{
     padding: 60px 20px;
@@ -202,7 +204,7 @@
         line-height: 40px;
         background-color: #fff;
         border: 1px solid #027373;
-        outline: 3px solid #fff;
+        outline: 3px solid #fff !important;
         @include border-radius(6px);
         text-align: center;
         &:hover{
