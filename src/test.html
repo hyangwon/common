@@ -16,7 +16,10 @@
 <body>
   <div class="wrap">
     <div class="container">
+      <!-- header 영역 -->
       <header include-html="./include/header.html" class="header-area"></header>
+      <!-- //header 영역 -->
+      
       <main id="content" class="main-page">
         <div class="inner">
           <h2 class="page-title">주택도시기금</h2>
@@ -86,25 +89,41 @@
 
           <!--  //slide -->
           <!-- indexTab -->
-          <div class="index-report clearfix">
+          <div class="report-area">
             <div class="report-box">
               <h3 class="report-title">월간 운용보고서</h3>
               <ul class="report-list">
                 <li class="list-item">
-                  <a href="#"><b>2021 8</b>월 월간보고서</a>
-                  <span>2021.11.24</span>
+                  <a href="#" class="list-link">
+                    <span class="list-title">
+                      <strong>2021 8월</strong> 월간보고서
+                    </span>
+                    <span class="list-date">2021.11.24</span>
+                  </a>
                 </li>
                 <li class="list-item">
-                  <a href="#"><b>2021 7</b>월 월간보고서</a>
-                  <span>2021.11.24</span>
+                  <a href="#" class="list-link">
+                    <span class="list-title">
+                      <strong>2021 7월</strong> 월간보고서
+                    </span>
+                    <span class="list-date">2021.11.24</span>
+                  </a>
                 </li>
                 <li class="list-item">
-                  <a href="#"><b>2021 6</b>월 월간보고서</a>
-                  <span>2021.11.24</span>
+                  <a href="#" class="list-link">
+                    <span class="list-title">
+                      <strong>2021 6월</strong> 월간보고서
+                    </span>
+                    <span class="list-date">2021.11.24</span>
+                  </a>
                 </li>
                 <li class="list-item">
-                  <a href="#"><b>2021 5</b>월 월간보고서</a>
-                  <span>2021.11.24</span>
+                  <a href="#" class="list-link">
+                    <span class="list-title">
+                      <strong>2021 5월</strong> 월간보고서
+                    </span>
+                    <span class="list-date">2021.11.24</span>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -112,20 +131,36 @@
               <h3 class="report-title">업무보고</h3>
               <ul class="report-list">
                 <li class="list-item">
-                  <a href="#"><b>2021 8</b>월 월간보고서</a>
-                  <span>2021.11.24</span>
+                  <a href="#" class="list-link">
+                    <span class="list-title">
+                      <strong>2021 8월</strong> 월간보고서
+                    </span>
+                    <span class="list-date">2021.11.24</span>
+                  </a>
                 </li>
                 <li class="list-item">
-                  <a href="#"><b>2021 7</b>월 월간보고서</a>
-                  <span>2021.11.24</span>
+                  <a href="#" class="list-link">
+                    <span class="list-title">
+                      <strong>2021 7월</strong> 월간보고서
+                    </span>
+                    <span class="list-date">2021.11.24</span>
+                  </a>
                 </li>
                 <li class="list-item">
-                  <a href="#"><b>2021 6</b>월 월간보고서</a>
-                  <span>2021.11.24</span>
+                  <a href="#" class="list-link">
+                    <span class="list-title">
+                      <strong>2021 6월</strong> 월간보고서
+                    </span>
+                    <span class="list-date">2021.11.24</span>
+                  </a>
                 </li>
                 <li class="list-item">
-                  <a href="#"><b>2021 5</b>월 월간보고서</a>
-                  <span>2021.11.24</span>
+                  <a href="#" class="list-link">
+                    <span class="list-title">
+                      <strong>2021 5월</strong> 월간보고서
+                    </span>
+                    <span class="list-date">2021.11.24</span>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -133,6 +168,9 @@
           <!-- //indexTab -->
         </div>
       </main>
+      <!-- footer 영역 -->
+      <footer include-html="./include/footer.html" class="footer-area"></footer>
+      <!-- //footer 영역 -->
     </div>
   </div>
 
@@ -151,8 +189,8 @@
         dots: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: false,
-        autoplaySpeed: 5000,
+        autoplay: true,
+        autoplaySpeed: 4000,
       });
     });
 
