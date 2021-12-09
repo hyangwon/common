@@ -19,16 +19,22 @@
   }
 
   .inner{
-    padding: 22px 20px;
+    padding: 0 20px;
     font-size: 0;
     box-sizing: border-box;
     @include clear;
   }
 
   .header-title{
+    position: relative;
     float: left;
+    padding: 22px 0;
     margin-right: 70px;
-    @include sprite($logo_main);
+    &:before{
+      content: '';
+      position: absolute;
+      @include sprite($logo_main);
+    }
 
     .title-link{
       display: block;
@@ -40,7 +46,7 @@
   .btn-link{
     float: left;
     padding: 12px 20px;
-    margin-top: 5px;
+    margin-top: 25px;
     color: $main-color;
     font-size: 14px;
     font-weight: bold;
@@ -55,20 +61,30 @@
 
   .tab-list{
     float: left;
-    margin: 5px 0 0 50px;
+    margin-left:50px;
 
     .list-item{
       position: relative;
       display: inline-block;
-      padding: 12px 20px;
+      padding: 39px 20px;
       vertical-align: top;
       cursor: pointer;
       &:hover{
+        .item-title:before{
+          content: '';
+          position: absolute;
+          top: 30px;
+          right: 0;
+          left: 0;
+          height: 2px;
+          background-color: $main-color;
+        }
         .sub-tab{
           display: block;
         }
       }
       .item-title{
+        position: relative;
         color: #000;
         font-size: 15px;
         font-weight: bold;
@@ -78,7 +94,7 @@
     .sub-tab{
       display: none;
       position: absolute;
-      top: 40px;
+      top: 101px;
       left: 0;
       width: 100%;
       padding: 20px;
@@ -115,7 +131,7 @@
   .btn-box{
     float: right;
     padding: 10px 5px;
-    margin-top: 5px;
+    margin-top: 25px;
 
     .btn-login{
       display: inline-block;
