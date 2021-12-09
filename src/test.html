@@ -151,6 +151,10 @@
         autoplaySpeed: 5000,
       });
     });
+
+    $(window).scroll(function() {
+      $('.header-area').css({left: 0 - $(this).scrollLeft()});
+    });
   </script>
 </body>
 

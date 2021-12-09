@@ -437,6 +437,7 @@ body {
   overflow: hidden;
   height: 100%;
   min-width: 1440px;
+  padding-top: 102px;
 }
 .main-page .inner {
   padding: 60px 20px;
@@ -570,14 +571,17 @@ body {
 }
 
 .header-area {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   background-color: #fff;
-  border-bottom: 1px solid #027373;
 }
 .header-area .inner {
   padding: 22px 20px;
   font-size: 0;
   box-sizing: border-box;
+  border-bottom: 1px solid #027373;
 }
 .header-area .inner::after {
   content: "";

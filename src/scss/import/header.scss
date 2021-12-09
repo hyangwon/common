@@ -2,14 +2,17 @@
 @import '../../img/images/sprite.scss';
 
 .header-area{
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   background-color: #fff;
-  border-bottom: 1px solid #027373;
 
   .inner{
     padding: 22px 20px;
     font-size: 0;
     box-sizing: border-box;
+    border-bottom: 1px solid #027373;
     @include clear;
   }
 
