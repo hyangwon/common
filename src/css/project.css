@@ -335,11 +335,8 @@ body {
   margin: 0 auto;
 }
 
-.btn-top {
-  display: none;
-  position: fixed;
-  right: 40px;
-  bottom: 50px;
+#btn_top {
+  position: absolute;
   width: 48px;
   height: 48px;
   -webkit-border-radius: 24px;
@@ -349,9 +346,17 @@ body {
   box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.1);
   border: solid 0.5px #ececec;
   transition: opacity 0.5s;
+  top: 750px;
+  left: 50%;
+  margin-left: 680px;
+  display: block;
+  z-index: 1101;
+  transition: opacity 0.1s;
+  opacity: 0;
   cursor: pointer;
+  background: #fff;
 }
-.btn-top:before {
+#btn_top:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -362,8 +367,11 @@ body {
   width: 25px;
   height: 25px;
 }
-.btn-top.on {
-  display: block;
+#btn_top:hover {
+  transform: scale(1.03);
+}
+#btn_top:active {
+  transform: scale(0.97);
 }
 
 @font-face {
