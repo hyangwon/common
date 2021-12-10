@@ -26,7 +26,7 @@ gulp.task('sourcemaps', function () {
 
 // 스프라이트 이미지
 gulp.task('sprite', function() {
-  const spriteData = gulp.src('src/img/sprite/*.png').pipe(spritesmith({
+  const spriteData = gulp.src('src/img/sprite/*').pipe(spritesmith({
     imgName: 'sprite.png',
     cssName: 'sprite.css',
     cssName: 'sprite.scss',
