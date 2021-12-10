@@ -336,6 +336,7 @@ body {
 }
 
 .btn-top {
+  display: none;
   position: fixed;
   right: 40px;
   bottom: 50px;
@@ -360,6 +361,9 @@ body {
   background-position: -215px -113px;
   width: 25px;
   height: 25px;
+}
+.btn-top.on {
+  display: block;
 }
 
 @font-face {
@@ -731,7 +735,7 @@ body {
   left: 0;
   margin-top: -3px;
   background-image: url(../img/images/sprite.png);
-  background-position: -200px -168px;
+  background-position: -200px -151px;
   width: 6px;
   height: 6px;
 }

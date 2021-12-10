@@ -45,7 +45,8 @@
                       <strong class="list-num">38</strong> 조원
                     </span>
                     <span class="sub-text">2020년 연간 기준</span>
-                    <a href="/" class="btn-link">바로가기</a></li>
+                    <a href="/" class="btn-link">바로가기</a>
+                  </li>
                   <li class="list-item">
                     <span class="list-title">여유자금 운용성과</span>
                     <span class="list-amout">
@@ -62,7 +63,8 @@
                   <p>주택도시기금과 함께 발전하고 최고의 성과를 지속합니다<br>
                     기금전체를 고민합니다.</p>
                   <p>It develops with the Housing and Urban Fund and continues its best performance.
-                    <br>I'm thinking about the entire fund.</p>
+                    <br>I'm thinking about the entire fund.
+                  </p>
                 </div>
                 <ul class="sub-list">
                   <li class="list-item">
@@ -202,26 +204,32 @@
     });
 
     $(window).scroll(function() {
-      $('.header-area').css({left: 0 - $(this).scrollLeft()});
+      $('.header-area').css({
+        left: 0 - $(this).scrollLeft()
+      });
     });
 
-    $(function() {
+
+
+    $(document).ready(function() {
+      $(".btn-top").hide(); // 탑 버튼 숨김
+      $(function() {
         $(window).scroll(function() {
-            if ($(this).scrollTop() < 500) {
-                $('.btn-top').fadeIn();
-            } else {
-                $('.btn-top').fadeOut();
-            }
+          if ($(this).scrollTop() > 100) { // 스크롤 내릴 표시
+            $('.btn-top').fadeIn();
+          } else {
+            $('.btn-top').fadeOut();
+          }
         });
 
-        $(".btn-top").click(function() {
-            $('html, body').animate({
-                scrollTop : 0
-            }, 400);
-            return false;
+        $('.btn-top').click(function() {
+          $('body,html').animate({
+            scrollTop: 0
+          }, 800); // 탑 이동 스크롤 속도
+          return false;
         });
+      });
     });
-
   </script>
 </body>
 
