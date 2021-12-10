@@ -204,6 +204,24 @@
     $(window).scroll(function() {
       $('.header-area').css({left: 0 - $(this).scrollLeft()});
     });
+
+    $(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() < 500) {
+                $('.btn-top').fadeIn();
+            } else {
+                $('.btn-top').fadeOut();
+            }
+        });
+
+        $(".btn-top").click(function() {
+            $('html, body').animate({
+                scrollTop : 0
+            }, 400);
+            return false;
+        });
+    });
+
   </script>
 </body>
 
