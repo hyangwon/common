@@ -8,8 +8,13 @@
   <link rel="stylesheet" href="./css/project.css">
   <link rel="stylesheet" type="text/css" href="./slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css" />
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="./slick/slick.min.js"></script>
   <script src="./js/includeHTML.js"></script>
   <script src="./js/includeRouter.js"></script>
+  <script src="./js/main.js"></script>
+
   <title>test</title>
 </head>
 
@@ -174,35 +179,14 @@
       <!-- footer 영역 -->
       <footer include-html="./include/footer.html" class="footer-area"></footer>
       <!-- //footer 영역 -->
-
-      <button type="button" name="button" class="btn-top">
-        <span class="blind">상단으로 이동</span>
-      </button>
+      <a href="#" id="btn_top" role="button"><span class="blind">상단으로 이동</span></a>
     </div>
   </div>
 
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="./slick/slick.min.js"></script>
+
   <script>
     includeHTML(function() {
       includeRouter(function() {});
-    });
-  </script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('.slide-list').slick({
-        infinite: true,
-        dots: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 4000,
-      });
-    });
-
-    $(window).scroll(function() {
-      $('.header-area').css({left: 0 - $(this).scrollLeft()});
     });
   </script>
 </body>
