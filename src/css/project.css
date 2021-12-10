@@ -336,7 +336,8 @@ body {
 }
 
 #btn_top {
-  position: absolute;
+  position: fixed;
+  bottom: 150px;
   width: 48px;
   height: 48px;
   -webkit-border-radius: 24px;
@@ -345,8 +346,6 @@ body {
   border-radius: 24px;
   box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.1);
   border: solid 0.5px #ececec;
-  transition: opacity 0.5s;
-  top: 750px;
   left: 50%;
   margin-left: 680px;
   display: block;
