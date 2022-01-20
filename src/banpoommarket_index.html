@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>반품마켓</title>
+    <style>
+        /* 초기화 */
+        @charset "UTF-8";
+html {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.56px;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+}
+
+.clear {
+  clear: both;
+}
+
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.wrap {
+  width: 100%;
+  min-width: 1440px;
+}
+
+.inner {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+/* Reset */
+* {
+  outline: 0 !important;
+}
+
+address,
+article,
+aside,
+blockquote,
+body,
+button,
+caption,
+code,
+dd,
+div,
+dl,
+dt,
+fieldset,
+figcaption,
+figure,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+html,
+input,
+label,
+legend,
+li,
+menu,
+nav,
+object,
+ol,
+p,
+pre,
+section,
+table,
+tbody,
+td,
+textarea,
+tfoot,
+th,
+thead,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  width: 100%;
+}
+
+html {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  width: 100%;
+  background: #fff;
+  min-width: 320px;
+  -webkit-text-size-adjust: none;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  border: none;
+  font-size: 14px;
+  font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+  color: #000;
+}
+
+li,
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+address,
+cite,
+code,
+em {
+  font-style: normal;
+  font-weight: normal;
+}
+
+button,
+img,
+input,
+label,
+select,
+textarea {
+  vertical-align: middle;
+}
+
+.hide,
+caption,
+legend {
+  line-height: 0;
+  font-size: 1px;
+  overflow: hidden;
+}
+
+hr {
+  display: none;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+button {
+  background-color: #fff;
+}
+
+/* Form */
+textarea {
+  border: 1px solid #dbdbdb;
+}
+
+select {
+  height: 32px;
+  font-size: 13px;
+  color: #373737;
+  border: 1px solid #e9e9e9;
+  background: #fff;
+  border-radius: 5px;
+}
+
+input[type=date],
+input[type=email],
+input[type=file],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+textarea {
+  width: 100%;
+  height: 30px;
+  font-size: 13px;
+  color: #373737;
+  border: 1px solid #e9e9e9;
+  background: #fff;
+  text-indent: 20px;
+  border-radius: 5px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  vertical-align: middle;
+}
+
+input::-webkit-input-placeholder {
+  color: #999;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+textarea {
+  padding: 5px 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border: 1px solid #727272;
+}
+
+input[type=email][disabled],
+input[type=email][readonly],
+input[type=password][disabled],
+input[type=password][readonly],
+input[type=search][disabled],
+input[type=search][readonly],
+input[type=tel][disabled],
+input[type=tel][readonly],
+input[type=text][disabled],
+input[type=text][readonly] {
+  background: #eaeaea;
+  border-color: #c0c0c0;
+  color: #666;
+  -webkit-appearance: none;
+  font-size: 12px;
+}
+
+textarea[disabled],
+textarea[readonly] {
+  padding: 11px;
+  font-size: 16px;
+  color: #666;
+  font-weight: normal;
+  line-height: 140%;
+  height: 78px;
+  background: #eaeaea;
+  border: 1px solid #c0c0c0;
+}
+
+.clear {
+  clear: both;
+}
+
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+</style>
+<style>
+html {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.56px;
+}
+body {
+  position: relative;
+  min-height: 100vh;
+  font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+}
+.clear {
+  clear: both;
+}
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.wrap {
+  width: 100%;
+  min-width: 1440px;
+}
+.inner {
+  width: 1440px;
+  margin: 0 auto;
+}
+.index_area {
+  max-width: 960px;
+  padding: 20px;
+}
+.index_area h1 {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  color: #7030a0;
+  font-size: 30px;
+  line-height:40px;
+  border-bottom: 2px solid #562b75;
+}
+.index_area h1 .date{
+    font-size:16px;
+    font-weight:normal;
+    color:#a0a0a8;
+    white-space:nowrap;
+    margin-left:8px;
+    line-height:40px;
+}
+.index_area h2 {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.index_area h2 a {
+  font-size: 20px;
+  color:rgba(112, 48, 160, 0.8)
+}
+.index_area a {
+  color: #333;
+  font-size: 15px;
+  text-decoration: none;
+  line-height:20px;
+}
+.index_area ul {
+    border-top:2px solid rgba(86, 43, 117, 0.8);
+    border-bottom:1px solid rgba(86, 43, 117, 0.4);
+    padding-left: 0;
+}
+.index_area ul li {
+  position: relative;
+  padding: 8px 10px;
+  list-style: none;
+  border-top:1px solid rgba(86, 43, 117, 0.2);
+
+}
+.index_area ul li:first-child {
+  border-top:0;
+}
+/* .index_area ul li:before {
+  content: "-";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+} */
+.new{
+    background:#e06666;
+    border:1px solod #a61c00;
+}
+.ing{
+    background:#91aeeb;
+    border:1px solod #6293f7;
+}
+.update{
+    background:#6aa84f;
+    border:1px solod #3c811e;
+}
+.end{
+    background:#c6c6c6;
+    border:1px solod #999;
+}
+.new, .ing, .update, .end{
+    display:inline-block;
+    color:#fff;
+    border-radius:2px;
+    font-size:11px;
+    height:20px;
+    width:40px;
+    line-height:20px;
+    margin-right:8px;;
+    vertical-align:top;
+    text-align:center;
+}
+.page_name{
+    display:inline-block;
+    color:#999;
+    margin-left:8px;
+    font-weight:normal;
+}
+.guide{
+    float:none;
+    clear:both;
+    width:960px;
+    padding-top:30px;
+    text-align:center;
+    color:#999;
+    font-size:13px;
+}
+</style>
+</head>
+
+<body>
+    <div id="app">
+        <div id="index" class="index_area">
+            <h1><span>반품마켓</span> INDEX<span class="date">01/02/2022 updated</span></h1>
+            <h2><a href="/shopping" class="">쇼핑</a></h2>
+            <ul>
+                <li><a href="/shopping" class=""><span class="ing">진행중</span>목록<span class="page_name">shopping</span></a></li>
+                <li><a href="/shopping/detail" class=""><span class="ing">진행중</span>상세<span class="page_name">shopping/detail</span></a></li>
+                <li><a href="/search" class=""><span class="ing">진행중</span>검색<span class="page_name">search</span></a></li>
+            </ul>
+            <h2><a href="/category" class="">카테고리</a></h2>
+            <ul>
+                <li><a href="/category" class=""><span class="ing">진행중</span>카테고리<span class="page_name">category</span></a</li>
+            </ul>
+            <h2><a href="/my" class="">my반켓</a></h2>
+            <ul>
+                <li><a href="/my/nickname" class=""><span class="ing">진행중</span>닉네임<span class="page_name">my/nickname</span></a></li>
+                <li><a href="/my/recent" class=""><span class="ing">진행중</span>최근 본<span class="page_name">my/recent</span></a></li>
+                <li><a href="/my/jjim" class=""><span class="ing">진행중</span>찜 한<span class="page_name">my/jjim</span></a></li>
+                <li><a href="/my/surprise/surprise" class=""><span class="ing">진행중</span>서프라이즈<span class="page_name">my/surprise/surprise</span></a></li>
+                <li><a href="/my/surprise/detail" class=""><span class="ing">진행중</span>서프라이즈 상세<span class="page_name">my/surprise/detail</span></a></li>
+                <li><a href="/my/notify" class=""><span class="ing">진행중</span>알림<span class="page_name">my/notify</span></a></li>
+                <li><a href="/my/shoppingMall" class=""><span class="ing">진행중</span>쇼핑몰 모아보기<span class="page_name">my/shoppingMall</span></a></li>
+                <li><a href="/my/introduce" class=""><span class="ing">진행중</span>반품마켓 소개<span class="page_name">my/introduce</span></a></li>
+                <li><a href="/my/notice" class=""><span class="ing">진행중</span>공지사항<span class="page_name">my/notice</span></a></li>
+                <li><a href="/my/faq" class=""><span class="ing">진행중</span>문의 · 건의<span class="page_name">my/faq</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="guide">EMFORCE JHW</div>
+</body>
+
+</html>
